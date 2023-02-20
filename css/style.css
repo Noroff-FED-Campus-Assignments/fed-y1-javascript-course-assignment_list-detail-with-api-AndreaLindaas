@@ -1,0 +1,8 @@
+.drink-image img {
+  width: 200px;
+}
+.drinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
