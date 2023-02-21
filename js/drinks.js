@@ -1,14 +1,19 @@
 const url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
 const drinksHtml = document.querySelector(".drinks");
 const numberOfDrinks = document.querySelector(".drinks-number");
-
-async function getCoctails() {
-  const response = await fetch(url);
-  const result = await response.json();
-  showCoctails(result.drinks);
+const errorHtml = document.querySelector(".error");
+async function getCocktails() {
+  try {
+    errorHtml.innerText = "";
+    const response = await fetch(url);
+    const result = await response.json();
+    showCocktails(result.drinks);
+  } catch (error) {
+    errorHtml.innerText = "Something went wrong";
+  }
 }
 
-function showCoctails(drinks) {
+function showCocktails(drinks) {
   let drinksText = `Number of drinks:${drinks.length}`;
   numberOfDrinks.innerHTML = drinksText;
   drinksHtml.innerHTML = "";
@@ -20,12 +25,12 @@ function showCoctails(drinks) {
     <div class="drink-image">
         <a href="details.html?id=${drinks[i].idDrink}">
         <img src="${drinks[i].strDrinkThumb}" />
+        <div class="drink-name">${drinks[i].strDrink}</div>
         </a>
-        <p>${drinks[i].strDrink}</p>
     </div>`;
 
     drinksHtml.innerHTML += drink;
   }
 }
 
-getCoctails();
+getCocktails();

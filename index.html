@@ -6,11 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Cocktails</h1>
-    <div class="drinks-number"></div>
-    <div class="drinks">Loading</div>
+    <div class="index-page">
+      <h1>Cocktails</h1>
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Search.." />
+      </div>
+      <div class="error"></div>
+      <div class="drinks-number"></div>
+      <div class="drinks">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
     <script src="js/drinks.js"></script>
   </body>
 </html>
