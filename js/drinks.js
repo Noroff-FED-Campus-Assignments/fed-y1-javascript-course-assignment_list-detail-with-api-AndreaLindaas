@@ -1,11 +1,25 @@
 const url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
+const urlSearch = "http://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const drinksHtml = document.querySelector(".drinks");
 const numberOfDrinks = document.querySelector(".drinks-number");
 const errorHtml = document.querySelector(".error");
+const searchHtml = document.querySelector(".search-bar");
+
 async function getCocktails() {
   try {
     errorHtml.innerText = "";
     const response = await fetch(url);
+    const result = await response.json();
+    showCocktails(result.drinks);
+  } catch (error) {
+    errorHtml.innerText = "Something went wrong";
+  }
+}
+
+async function searchCocktail(searchUrl) {
+  try {
+    errorHtml.innerText = "";
+    const response = await fetch(searchUrl);
     const result = await response.json();
     showCocktails(result.drinks);
   } catch (error) {
@@ -19,8 +33,6 @@ function showCocktails(drinks) {
   drinksHtml.innerHTML = "";
 
   for (let i = 0; i < drinks.length; i++) {
-    console.log(drinks[i]);
-
     let drink = `
     <div class="drink-image">
         <a href="details.html?id=${drinks[i].idDrink}">
@@ -32,5 +44,13 @@ function showCocktails(drinks) {
     drinksHtml.innerHTML += drink;
   }
 }
+
+searchHtml.onkeyup = function (event) {
+  console.log(event.target.value);
+
+  let searchWord = event.target.value;
+
+  searchCocktail(urlSearch + searchWord);
+};
 
 getCocktails();
