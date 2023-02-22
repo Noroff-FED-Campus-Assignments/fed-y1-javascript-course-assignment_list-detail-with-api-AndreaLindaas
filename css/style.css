@@ -67,12 +67,15 @@ a:link {
 .ingredients li {
   display: flex;
   gap: 20px;
-  /*grid-template-columns: 60px auto;*/
 }
 .list {
   margin: 0 auto;
   display: block;
   width: 285px;
+}
+.measure {
+  font-weight: bold;
+  font-style: italic;
 }
 /* .drink-info {
   text-align: center;
@@ -125,7 +128,17 @@ form textarea {
 
   padding: 10px;
 }
-
+.contact-page {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.error-messages {
+  color: red;
+}
+.input-error {
+  border: solid 1px red;
+}
 /*loading spinner from loading.io*/
 .lds-ring {
   display: inline-block;
@@ -140,10 +153,10 @@ form textarea {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid red;
+  border: 8px solid black;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: red transparent transparent transparent;
+  border-color: black transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;

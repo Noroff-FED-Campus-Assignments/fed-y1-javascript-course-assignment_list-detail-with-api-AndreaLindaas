@@ -7,16 +7,22 @@ const drinkName = document.querySelector(".title");
 const imageOfDrink = document.querySelector(".image-drink");
 const ingridientHtml = document.querySelector(".ingredients");
 const instructionHtml = document.querySelector(".instructions");
+const errorHtml = document.querySelector(".error");
+const title = document.querySelector("title");
 
 async function drinkDetails() {
-  const response = await fetch(url);
-  const result = await response.json();
-
-  showCocktail(result.drinks[0]);
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    showCocktail(result.drinks[0]);
+  } catch (error) {
+    errorHtml.innerText = "Something went wrong";
+  }
 }
 
 function showCocktail(cocktail) {
   console.log(cocktail);
+  title.innerHTML = cocktail["strDrink"];
   drinkName.innerHTML = cocktail["strDrink"];
   imageOfDrink.src = cocktail.strDrinkThumb;
   for (let i = 1; i <= 15; i++) {
@@ -24,7 +30,7 @@ function showCocktail(cocktail) {
     let ingredient = cocktail[`strIngredient${i}`];
 
     if (measure) {
-      let ingridientList = `<li><span>${measure}</span><span>${ingredient}</span></li>`;
+      let ingridientList = `<li><span class="measure">${measure}</span><span>${ingredient}</span></li>`;
 
       ingridientHtml.innerHTML += ingridientList;
     }
