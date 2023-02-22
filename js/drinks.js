@@ -46,11 +46,12 @@ function showCocktails(drinks) {
 }
 
 searchHtml.onkeyup = function (event) {
-  console.log(event.target.value);
-
   let searchWord = event.target.value;
-
-  searchCocktail(urlSearch + searchWord);
+  if (searchWord) {
+    searchCocktail(urlSearch + searchWord);
+  } else {
+    getCocktails();
+  }
 };
 
 getCocktails();
