@@ -5,6 +5,7 @@ const numberOfDrinks = document.querySelector(".drinks-number");
 const errorHtml = document.querySelector(".error");
 const searchHtml = document.querySelector(".search-bar");
 const alphabetHtml = document.querySelector(".alphabet");
+const nonAlcoHtml = document.querySelector("#non-alcoholic");
 
 function createAlphabet() {
   const alphabet = [
@@ -68,21 +69,31 @@ async function searchCocktail(searchUrl) {
 }
 
 function showCocktails(drinks) {
-  let drinksText = `Number of drinks:${drinks.length}`;
+  let drinksText = `Showing <strong>${drinks.length}</strong> drinks`;
   numberOfDrinks.innerHTML = drinksText;
   drinksHtml.innerHTML = "";
 
   for (let i = 0; i < drinks.length; i++) {
-    let drink = `
-    <div class="drink-image">
-        <a href="details.html?id=${drinks[i].idDrink}">
-        <img src="${drinks[i].strDrinkThumb}" />
-        <div class="drink-name">${drinks[i].strDrink}</div>
-        </a>
-    </div>`;
-
-    drinksHtml.innerHTML += drink;
+    if (nonAlcoHtml.checked) {
+      if (drinks[i].strAlcoholic != "Alcoholic") {
+        createAndAddDrinkCard(drinks[i]);
+      }
+    } else {
+      createAndAddDrinkCard(drinks[i]);
+    }
   }
+}
+
+function createAndAddDrinkCard(drinks) {
+  let drink = `
+  <div class="drink-image">
+      <a href="details.html?id=${drinks.idDrink}">
+      <img src="${drinks.strDrinkThumb}" />
+      <div class="drink-name">${drinks.strDrink}</div>
+      </a>
+  </div>`;
+
+  drinksHtml.innerHTML += drink;
 }
 
 searchHtml.onkeyup = function (event) {
