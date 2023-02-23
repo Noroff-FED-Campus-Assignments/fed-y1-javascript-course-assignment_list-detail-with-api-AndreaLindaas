@@ -6,7 +6,7 @@ const errorHtml = document.querySelector(".error");
 const searchHtml = document.querySelector(".search-bar");
 const alphabetHtml = document.querySelector(".alphabet");
 const nonAlcoHtml = document.querySelector("#non-alcoholic");
-
+let currentLetter = "A";
 function createAlphabet() {
   const alphabet = [
     "A",
@@ -43,7 +43,8 @@ function createAlphabet() {
   }
 }
 function letterClick(letter) {
-  getCocktails(letter);
+  currentLetter = letter;
+  getCocktails(currentLetter);
 }
 
 async function getCocktails(letter) {
@@ -53,7 +54,8 @@ async function getCocktails(letter) {
     const result = await response.json();
     showCocktails(result.drinks);
   } catch (error) {
-    errorHtml.innerText = "Something went wrong";
+    errorHtml.innerText =
+      "Something went wrong when fetching cocktails. Please try again";
   }
 }
 
@@ -64,24 +66,28 @@ async function searchCocktail(searchUrl) {
     const result = await response.json();
     showCocktails(result.drinks);
   } catch (error) {
-    errorHtml.innerText = "Something went wrong";
+    errorHtml.innerText =
+      "Something went wrong when searching for cocktails. Please try again";
   }
 }
 
 function showCocktails(drinks) {
-  let drinksText = `Showing <strong>${drinks.length}</strong> drinks`;
-  numberOfDrinks.innerHTML = drinksText;
   drinksHtml.innerHTML = "";
-
+  let drinksCounter = 0;
   for (let i = 0; i < drinks.length; i++) {
     if (nonAlcoHtml.checked) {
       if (drinks[i].strAlcoholic != "Alcoholic") {
+        drinksCounter++;
         createAndAddDrinkCard(drinks[i]);
       }
     } else {
+      drinksCounter = drinks.length;
       createAndAddDrinkCard(drinks[i]);
     }
   }
+
+  let drinksText = `Showing <strong>${drinksCounter}</strong> drinks`;
+  numberOfDrinks.innerHTML = drinksText;
 }
 
 function createAndAddDrinkCard(drinks) {
@@ -101,9 +107,12 @@ searchHtml.onkeyup = function (event) {
   if (searchWord) {
     searchCocktail(urlSearch + searchWord);
   } else {
-    getCocktails("A");
+    getCocktails(currentLetter);
   }
 };
-
+nonAlcoHtml.onchange = function (event) {
+  console.log(event.target.checked);
+  getCocktails(currentLetter);
+};
 createAlphabet();
-getCocktails("A");
+getCocktails(currentLetter);
