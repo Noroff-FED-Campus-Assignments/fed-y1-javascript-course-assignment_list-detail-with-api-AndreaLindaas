@@ -42,7 +42,7 @@ function validateAddress(address) {
     let errorMessage = "<li>Address is required</li>";
     errorMessages.innerHTML += errorMessage;
     addressHtml.classList.add("input-error");
-  } else if (address.length < 25) {
+  } else if (address.trim().length < 25) {
     let errorMessage = "<li>Address is too short (min 25)</li>";
     errorMessages.innerHTML += errorMessage;
     addressHtml.classList.add("input-error");
@@ -56,7 +56,7 @@ function validateMessage(message) {
     let errorMessage = "<li>Message is required</li>";
     errorMessages.innerHTML += errorMessage;
     messageHtml.classList.add("input-error");
-  } else if (message.length < 10) {
+  } else if (message.trim().length < 10) {
     let errorMessage = "<li>Message is too short (min 10)</li>";
     errorMessages.innerHTML += errorMessage;
     messageHtml.classList.add("input-error");
