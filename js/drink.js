@@ -25,6 +25,7 @@ function showCocktail(cocktail) {
   title.innerHTML = cocktail["strDrink"];
   drinkName.innerHTML = cocktail["strDrink"];
   imageOfDrink.src = cocktail.strDrinkThumb;
+  imageOfDrink.alt = `Picture of ${cocktail.strDrink}`;
   for (let i = 1; i <= 15; i++) {
     let measure = cocktail[`strMeasure${i}`];
     let ingredient = cocktail[`strIngredient${i}`];
