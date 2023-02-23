@@ -193,6 +193,11 @@ form textarea {
   color: red;
   margin-top: 40px;
 }
+
+.input-success {
+  border: solid 1px green;
+}
+
 .input-error {
   border: solid 1px red;
 }
@@ -221,6 +226,7 @@ form textarea {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*loading spinner from loading.io*/
