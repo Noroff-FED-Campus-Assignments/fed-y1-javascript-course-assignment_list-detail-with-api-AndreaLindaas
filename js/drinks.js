@@ -98,7 +98,9 @@ function showCocktails(drinks) {
     }
   }
 
-  let drinksText = `Showing <strong>${drinksCounter}</strong> drinks`;
+  let drinksText = `Showing <strong>${drinksCounter}</strong> drinks for <strong>${
+    searchHtml.value ? searchHtml.value : currentLetter
+  }</strong>`;
   numberOfDrinks.innerHTML = drinksText;
 }
 
