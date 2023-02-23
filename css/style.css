@@ -5,10 +5,9 @@ h1 {
   text-align: center;
   margin: 50px auto 30px auto;
   font-family: "Dancing Script", cursive;
-}
-.index-page h1 {
   font-size: 80px;
 }
+
 .drinks-number {
   text-align: center;
   margin: 20px;
@@ -56,6 +55,7 @@ a:link {
 /* .details-page h1 {
   text-align: center;
 } */
+
 .details-page img {
   width: 300px;
   margin: 0 auto;
@@ -135,6 +135,7 @@ form textarea {
 }
 .error-messages {
   color: red;
+  margin-top: 40px;
 }
 .input-error {
   border: solid 1px red;
