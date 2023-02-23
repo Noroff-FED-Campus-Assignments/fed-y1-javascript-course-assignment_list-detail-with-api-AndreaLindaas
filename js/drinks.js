@@ -6,7 +6,10 @@ const errorHtml = document.querySelector(".error");
 const searchHtml = document.querySelector(".search-bar");
 const alphabetHtml = document.querySelector(".alphabet");
 const nonAlcoHtml = document.querySelector("#non-alcoholic");
+const sortHtml = document.querySelector("#sort");
+
 let currentLetter = "A";
+
 function createAlphabet() {
   const alphabet = [
     "A",
@@ -74,6 +77,15 @@ async function searchCocktail(searchUrl) {
 function showCocktails(drinks) {
   drinksHtml.innerHTML = "";
   let drinksCounter = 0;
+  let sort = sortHtml.value;
+
+  if (sort === "asc") {
+    drinks = drinks.sort(compare);
+  } else if (sort === "desc") {
+    drinks = drinks.sort(compare);
+    drinks = drinks.reverse();
+  }
+
   for (let i = 0; i < drinks.length; i++) {
     if (nonAlcoHtml.checked) {
       if (drinks[i].strAlcoholic != "Alcoholic") {
@@ -110,9 +122,32 @@ searchHtml.onkeyup = function (event) {
     getCocktails(currentLetter);
   }
 };
-nonAlcoHtml.onchange = function (event) {
-  console.log(event.target.checked);
-  getCocktails(currentLetter);
+nonAlcoHtml.onchange = function () {
+  if (searchHtml.value) {
+    searchCocktail(urlSearch + searchHtml.value);
+  } else {
+    getCocktails(currentLetter);
+  }
 };
+
+sortHtml.onchange = function () {
+  if (searchHtml.value) {
+    searchCocktail(urlSearch + searchHtml.value);
+  } else {
+    getCocktails(currentLetter);
+  }
+};
+
+//borrowed from the internet (stackoverflow)
+function compare(a, b) {
+  if (a.strDrink < b.strDrink) {
+    return -1;
+  }
+  if (a.strDrink > b.strDrink) {
+    return 1;
+  }
+  return 0;
+}
+
 createAlphabet();
 getCocktails(currentLetter);

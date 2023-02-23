@@ -25,11 +25,19 @@
       </div>
       <div class="error"></div>
       <div class="alphabet"></div>
-      <div>
+      <div class="info-filters">
         <div class="drinks-number"></div>
         <div>
           <input type="checkbox" id="non-alcoholic" />
           <label for="non-alcoholic">Show only non-alcoholic</label>
+        </div>
+        <div>
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option selected value="default">Default</option>
+            <option value="asc">Name ascending</option>
+            <option value="desc">Name descending</option>
+          </select>
         </div>
       </div>
       <div class="drinks">

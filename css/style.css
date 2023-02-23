@@ -2,6 +2,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   position: relative;
+  font-family: roboto;
 }
 nav {
   position: fixed;
@@ -17,7 +18,7 @@ nav a {
   font-size: 18px;
   background: orange;
   color: white;
-  font-family: roboto;
+
   font-weight: bold;
   width: 90px;
   height: 30px;
@@ -31,7 +32,7 @@ nav a:hover {
 
 @media screen and (min-width: 768px) {
   nav {
-    left: -40px;
+    left: -38px;
     transform: rotate(-90deg);
   }
   nav:hover {
@@ -46,18 +47,20 @@ h1 {
   font-size: 80px;
 }
 
-.drinks-number {
-  text-align: center;
-  margin: 20px;
-}
-
 .alphabet {
   text-align: center;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 .alphabet span {
   padding: 0 10px;
   cursor: pointer;
+}
+.info-filters {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
 }
 .drink-image img {
   width: 200px;
@@ -65,9 +68,12 @@ h1 {
 .drink-image {
   max-width: 200px;
   background-color: #268d49a8;
+  transform: rotate(0deg);
 }
 .drink-image:hover {
   opacity: 0.8;
+  transform: rotate(1deg);
+  transition: transform 0.2s ease-in-out;
 }
 .drinks {
   display: flex;
