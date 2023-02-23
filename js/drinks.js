@@ -1,14 +1,54 @@
-const url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
+const url = "http://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
 const urlSearch = "http://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const drinksHtml = document.querySelector(".drinks");
 const numberOfDrinks = document.querySelector(".drinks-number");
 const errorHtml = document.querySelector(".error");
 const searchHtml = document.querySelector(".search-bar");
+const alphabetHtml = document.querySelector(".alphabet");
 
-async function getCocktails() {
+function createAlphabet() {
+  const alphabet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
+  for (let i = 0; i < alphabet.length; i++) {
+    let letter = `<span onclick="letterClick('${alphabet[i]}')">${alphabet[i]}</span>`;
+    alphabetHtml.innerHTML += letter;
+  }
+}
+function letterClick(letter) {
+  getCocktails(letter);
+}
+
+async function getCocktails(letter) {
   try {
     errorHtml.innerText = "";
-    const response = await fetch(url);
+    const response = await fetch(url + letter);
     const result = await response.json();
     showCocktails(result.drinks);
   } catch (error) {
@@ -50,8 +90,9 @@ searchHtml.onkeyup = function (event) {
   if (searchWord) {
     searchCocktail(urlSearch + searchWord);
   } else {
-    getCocktails();
+    getCocktails("A");
   }
 };
 
-getCocktails();
+createAlphabet();
+getCocktails("A");
