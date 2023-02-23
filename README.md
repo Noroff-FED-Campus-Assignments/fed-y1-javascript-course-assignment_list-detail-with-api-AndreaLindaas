@@ -69,7 +69,7 @@ Make sure you go through this checklist before submitting your project to Moodle
   - [ ] A placeholder,
   - [ ] A aria-describedby,
   - [ ] Required
-- [ ] All images have an alt tag;
+- [x] All images have an alt tag;
 - [x] I have not copied Javascript code.
 - [x] I have not used a Javascript library.
 - [x] Removed all unused files.

@@ -108,7 +108,7 @@ function createAndAddDrinkCard(drinks) {
   let drink = `
   <div class="drink-image">
       <a href="details.html?id=${drinks.idDrink}">
-      <img src="${drinks.strDrinkThumb}" />
+      <img alt="Picture of ${drinks.strDrink}" src="${drinks.strDrinkThumb}" />
       <div class="drink-name">${drinks.strDrink}</div>
       </a>
   </div>`;
