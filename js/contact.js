@@ -4,6 +4,7 @@ const fName = document.querySelector("#fname");
 const mail = document.querySelector("#email");
 const addressHtml = document.querySelector("#address");
 const messageHtml = document.querySelector("#message");
+const modal = document.querySelector(".modal");
 
 form.onsubmit = function (event) {
   event.preventDefault();
@@ -13,6 +14,10 @@ form.onsubmit = function (event) {
   validateEmail(mail.value);
   validateAddress(addressHtml.value);
   validateMessage(messageHtml.value);
+
+  if (errorMessages.innerHTML === "") {
+    modal.style.display = "block";
+  }
 };
 
 function validateName(name) {
@@ -60,5 +65,7 @@ function validateMessage(message) {
     let errorMessage = "<li>Message is too short (min 10)</li>";
     errorMessages.innerHTML += errorMessage;
     messageHtml.classList.add("input-error");
+  } else {
+    messageHtml.classList.remove("input-error");
   }
 }

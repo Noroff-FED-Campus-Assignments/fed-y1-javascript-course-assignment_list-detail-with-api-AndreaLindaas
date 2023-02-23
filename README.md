@@ -2,22 +2,17 @@
 
 # FED Javascript 1 - Course Assignment
 
-## Resources
-
-- [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
-
 ## Report
 
 I assume that the users of this cocktail site will be young people, and therefore I am trying to make a more vibrant design. For example the rotated navigation button on the left and using bright colors.
 
-I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation. Maybe its best to use both at the same time? I did it without 'required' and 'min' attributes on the inputs.
+I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation.
 
-It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API.
+It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API. The same goes for sort function. I also had to find some code for sorting array from the internet because I could not get it to work with just .sort() from the earlier lessons.
 
 Working with the API was OK, it had good enough documentation but I managed to understand what the endpoints contained by visiting them in the browser.
+
+I also had started on my own before this repo was ready. I did not want to copy paste my code into this repos premade html, css and js files, so I just moved my main branch over from private github. I had help doing this.
 
 ## Getting Started
 
@@ -43,41 +38,20 @@ All of these todo's must be done to pass the asssignment.
 
 - [x] End-user can search for a specific item.
 - [x] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
-  - [ ] Name descending order
-- [ ] Confirmation modal after custumer submits a successful contact form.
-- [ ] End-user can auto-fill the contact form using the browser auto-fill.
-- [ ] End-user can auto-fill the contact form using a password manager.
-- [ ] Validation still works when End-user uses copy and pastes into input fields.
+- [x] End-user can sort list by;
+  - [x] Name ascending order
+  - [x] Name descending order
+- [x] Confirmation modal after customer submits a successful contact form.
+- [x] End-user can auto-fill the contact form using the browser auto-fill.
+- [x] End-user can auto-fill the contact form using a password manager.
+- [x] Validation still works when End-user uses copy and pastes into input fields.
 - [ ] End-user can see a postive feedback when they input correct info and pass validation.
 - [ ] End-user can experience pleasant animations.
-  - [ ] Each item in the list has a staggered animation.
+  - [x] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [ ] End-user can view a custom favicon.
 - [ ] CSS uses variables
 - [x] Code is dry - There are no repeating functions, variables.
-- [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
-- [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
-
-  - [ ] Is user-friendly
-  - [ ] Effective use of the pillars of design
-    - [ ] Typography
-    - [ ] COlour
-    - [ ] Composition
-    - [ ] Art Direction
-    - [ ] Motion
-  - [ ] Adhered to principles of design
-    - [ ] Contrast
-    - [ ] Balance and alignment
-    - [ ] Emphasis
-    - [ ] Proportion
-    - [ ] Hiearchy
-    - [ ] Repetition
-    - [ ] Ryhthem
-    - [ ] Pattern
-    - [ ] Negative space
-    - [ ] Movement
 
 ## Checklist
 
@@ -85,21 +59,21 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 - [ ] All pages have a meta description.
 - [ ] All pages have a valid title.
-- [ ] All pages import the correct css files.
-- [ ] All pages import the correct JS file.
-- [ ] Details page URL includes a query param.
-- [ ] My website makes a GET request to an API to get a list of results.
-- [ ] My website makes a GET request to an API to get details of one result.
+- [x] All pages import the correct css files.
+- [x] All pages import the correct JS file.
+- [x] Details page URL includes a query param.
+- [x] My website makes a GET request to an API to get a list of results.
+- [x] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
-- [ ] All images have an alt tag;
   - [ ] A name,
   - [ ] A placeholder,
   - [ ] A aria-describedby,
   - [ ] Required
-- [ ] I have not copied Javascript code.
-- [ ] I have not used a Javascript library.
-- [ ] Removed all unused files.
-- [ ] Named all images properly.
+- [ ] All images have an alt tag;
+- [x] I have not copied Javascript code.
+- [x] I have not used a Javascript library.
+- [x] Removed all unused files.
+- [x] Named all images properly.
 - [ ] Committed all my code to github.
 - [ ] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
