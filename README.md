@@ -11,15 +11,17 @@
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+I assume that the users of this cocktail site will be young people, and therefore I am trying to make a more vibrant design. For example the rotated navigation button on the left and using bright colors.
+
+I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation. Maybe its best to use both at the same time? I did it without 'required' and 'min' attributes on the inputs.
+
+It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API.
+
+Working with the API was OK, it had good enough documentation but I managed to understand what the endpoints contained by visiting them in the browser.
 
 ## Getting Started
 
-In the project directory, you can run:
-
-- install the project node module dependencies $`npm i`
-- Runs the app in the development mode. `npm run dev`
-- Open `http://127.0.0.1:5173/` to view it in the browser.
+Run project with "Open with live server" in Visual Studio Code.
 
 ## Minimum acceptence criteria (Required - 50%)
 

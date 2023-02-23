@@ -1,5 +1,5 @@
-const url = "http://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
-const urlSearch = "http://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
+const urlSearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const drinksHtml = document.querySelector(".drinks");
 const numberOfDrinks = document.querySelector(".drinks-number");
 const errorHtml = document.querySelector(".error");

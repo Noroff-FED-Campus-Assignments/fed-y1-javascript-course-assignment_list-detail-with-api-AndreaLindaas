@@ -6,7 +6,7 @@ body {
 nav {
   position: fixed;
   top: 75px;
-  left: -40px;
+  left: -30px;
   transform: rotate(-90deg);
 }
 nav a {
@@ -14,22 +14,30 @@ nav a {
   border-bottom: 1px solid rgb(162, 106, 1);
   border-right: 1px solid rgb(162, 106, 1);
   border-left: 1px solid rgb(162, 106, 1);
-  font-size: 20px;
+  font-size: 18px;
   background: orange;
   color: white;
-
+  font-family: roboto;
   font-weight: bold;
   width: 90px;
   height: 30px;
   display: inline-block;
   text-align: center;
 }
-nav:hover {
-  left: -30px;
-  transition: left 0.3s ease-in-out;
-}
+
 nav a:hover {
   background-color: darkorange;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    left: -40px;
+    transform: rotate(-90deg);
+  }
+  nav:hover {
+    left: -30px;
+    transition: left 0.3s ease-in-out;
+  }
 }
 h1 {
   text-align: center;
