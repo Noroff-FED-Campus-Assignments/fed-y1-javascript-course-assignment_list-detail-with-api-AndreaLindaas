@@ -1,5 +1,7 @@
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
 const urlSearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+const urlRandomCocktail =
+  "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 const drinksHtml = document.querySelector(".drinks");
 const numberOfDrinks = document.querySelector(".drinks-number");
 const errorHtml = document.querySelector(".error");
@@ -48,6 +50,18 @@ function createAlphabet() {
 function letterClick(letter) {
   currentLetter = letter;
   getCocktails(currentLetter);
+}
+
+async function getRandomDrink() {
+  try {
+    errorHtml.innerText = "";
+    const response = await fetch(urlRandomCocktail);
+    const result = await response.json();
+    window.location.href = `/details.html?id=${result.drinks[0].idDrink}`;
+  } catch (error) {
+    errorHtml.innerText =
+      "Something went wrong when fetching random cocktail. Please try again";
+  }
 }
 
 async function getCocktails(letter) {
@@ -107,7 +121,8 @@ function showCocktails(drinks) {
       searchHtml.value ? searchHtml.value : currentLetter
     }</strong>`;
   } else {
-    drinksText = "No drinks found!";
+    drinksText =
+      "No drinks found! <button onclick='getRandomDrink()'>Are you feeling lucky?</button>";
   }
 
   numberOfDrinks.innerHTML = drinksText;
