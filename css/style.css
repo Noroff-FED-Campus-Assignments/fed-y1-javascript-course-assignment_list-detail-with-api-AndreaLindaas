@@ -10,7 +10,7 @@ body {
   background-color: var(--grey);
   margin: 0;
   position: relative;
-  font-family: roboto;
+  font-family: roboto, "Gill Sans";
 }
 
 nav {
@@ -51,24 +51,28 @@ h1 {
   margin-bottom: 30px;
   font-weight: bold;
   overflow-wrap: break-word;
+  font-size: 22px;
+  padding: 0 35px;
 }
 .alphabet span {
   padding: 0 10px;
   cursor: pointer;
 }
 .info-filters {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
   margin: 20px;
+  text-align: center;
 }
+
+.info-filters > div {
+  margin: 20px 0;
+}
+
 .drink-image img {
-  width: 200px;
+  width: 280px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
 .drink-image {
-  max-width: 200px;
   background-color: var(--green);
   transform: rotate(0deg);
   border-radius: 5px;
@@ -118,30 +122,42 @@ a:link {
   width: 300px;
   margin: 0 auto;
   display: block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-.list ul {
+.details-page .list ul {
   list-style-type: none;
 }
-.ingredients li {
+.details-page .ingredients li {
   display: flex;
   gap: 20px;
 }
-.list {
+.details-page .list {
   margin: 0 auto;
   display: block;
-  width: 285px;
   background-color: var(--green);
   color: white;
   width: 300px;
   padding: 20px 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.measure {
+.details-page .list h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.details-page .instructions-header {
+  text-align: center;
+}
+
+.details-page .measure {
   font-weight: bold;
   font-style: italic;
 }
 
-.instructions {
-  margin: 0 auto;
+.details-page .instructions {
+  margin: 0 auto 50px auto;
   width: 300px;
 }
 /*contact*/
@@ -202,7 +218,6 @@ form textarea {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  /* width: 400px; */
   width: auto;
   text-align: center;
 }
@@ -216,19 +231,51 @@ form textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .img-ingredient {
+  .alphabet {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .info-filters {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px;
+  }
+
+  .drinks {
+    padding: 0 40px;
+  }
+
+  .drink-image img {
+    width: 200px;
+  }
+
+  /* Details page*/
+
+  .details-page .img-ingredient {
     display: flex;
     justify-content: center;
   }
-  .instructions {
+  .details-page .instructions {
     margin: 0 auto;
     width: 462px;
   }
-  .list {
+  .details-page .list {
     margin: 0;
     display: inline;
-    width: 300;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
   }
+  .details-page img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+  }
+
+  /* Contact page */
+
   .contact-page {
     display: flex;
     justify-content: center;
