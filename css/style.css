@@ -50,6 +50,7 @@ h1 {
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 .alphabet span {
   padding: 0 10px;
