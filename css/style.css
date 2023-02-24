@@ -38,16 +38,6 @@ nav a:hover {
   background-color: var(--darkorange);
 }
 
-@media screen and (min-width: 768px) {
-  nav {
-    left: -38px;
-    transform: rotate(-90deg);
-  }
-  nav:hover {
-    left: -30px;
-    transition: left 0.3s ease-in-out;
-  }
-}
 h1 {
   text-align: center;
   margin: 50px auto 30px auto;
