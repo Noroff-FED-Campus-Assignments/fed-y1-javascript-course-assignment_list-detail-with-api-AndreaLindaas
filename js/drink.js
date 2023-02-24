@@ -21,7 +21,6 @@ async function drinkDetails() {
 }
 
 function showCocktail(cocktail) {
-  console.log(cocktail);
   title.innerHTML = cocktail["strDrink"];
   drinkName.innerHTML = cocktail["strDrink"];
   imageOfDrink.src = cocktail.strDrinkThumb;
