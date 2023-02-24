@@ -75,6 +75,10 @@ async function searchCocktail(searchUrl) {
 }
 
 function showCocktails(drinks) {
+  if (!drinks) {
+    drinks = [];
+  }
+
   drinksHtml.innerHTML = "";
   let drinksCounter = 0;
   let sort = sortHtml.value;
@@ -97,10 +101,15 @@ function showCocktails(drinks) {
       createAndAddDrinkCard(drinks[i]);
     }
   }
+  let drinksText = "";
+  if (drinksCounter > 0) {
+    drinksText = `Showing <strong>${drinksCounter}</strong> drinks for <strong>${
+      searchHtml.value ? searchHtml.value : currentLetter
+    }</strong>`;
+  } else {
+    drinksText = "No drinks found!";
+  }
 
-  let drinksText = `Showing <strong>${drinksCounter}</strong> drinks for <strong>${
-    searchHtml.value ? searchHtml.value : currentLetter
-  }</strong>`;
   numberOfDrinks.innerHTML = drinksText;
 }
 
