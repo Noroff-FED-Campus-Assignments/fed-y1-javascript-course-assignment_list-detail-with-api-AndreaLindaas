@@ -2,7 +2,7 @@ const querystring = document.location.search;
 const params = new URLSearchParams(querystring);
 const id = params.get("id");
 
-const url = "http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + id;
+const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + id;
 const drinkName = document.querySelector(".title");
 const imageOfDrink = document.querySelector(".image-drink");
 const ingridientHtml = document.querySelector(".ingredients");

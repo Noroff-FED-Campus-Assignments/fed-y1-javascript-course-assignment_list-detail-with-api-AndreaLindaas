@@ -45,8 +45,8 @@ All of these todo's must be done to pass the asssignment.
 - [x] End-user can auto-fill the contact form using the browser auto-fill.
 - [x] End-user can auto-fill the contact form using a password manager.
 - [x] Validation still works when End-user uses copy and pastes into input fields.
-- [ ] End-user can see a postive feedback when they input correct info and pass validation.
-- [ ] End-user can experience pleasant animations.
+- [x] End-user can see a postive feedback when they input correct info and pass validation.
+- [x] End-user can experience pleasant animations.
   - [x] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
@@ -57,25 +57,25 @@ All of these todo's must be done to pass the asssignment.
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
+- [x] All pages have a meta description.
+- [x] All pages have a valid title.
 - [x] All pages import the correct css files.
 - [x] All pages import the correct JS file.
 - [x] Details page URL includes a query param.
 - [x] My website makes a GET request to an API to get a list of results.
 - [x] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
-  - [ ] A name,
-  - [ ] A placeholder,
+  - [x] A name,
+  - [x] A placeholder,
   - [ ] A aria-describedby,
-  - [ ] Required
+  - [x] Required
 - [x] All images have an alt tag;
 - [x] I have not copied Javascript code.
 - [x] I have not used a Javascript library.
 - [x] Removed all unused files.
 - [x] Named all images properly.
 - [ ] Committed all my code to github.
-- [ ] My repo is publically viewable.
+- [x] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
 - [ ] I've removed all todo notes in code.
 - [ ] I've removed all console logs in code.

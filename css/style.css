@@ -1,5 +1,13 @@
+:root {
+  --grey: #f4f4f4;
+  --orange: #ffa500;
+  --darkorange: #ff8c00;
+  --green: #268d49a8;
+  --red: #ff0000;
+}
+
 body {
-  background-color: #f4f4f4;
+  background-color: var(--grey);
   margin: 0;
   position: relative;
   font-family: roboto;
@@ -16,7 +24,7 @@ nav a {
   border-right: 1px solid rgb(162, 106, 1);
   border-left: 1px solid rgb(162, 106, 1);
   font-size: 18px;
-  background: orange;
+  background: var(--orange);
   color: white;
 
   font-weight: bold;
@@ -27,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: darkorange;
+  background-color: var(--darkorange);
 }
 
 @media screen and (min-width: 768px) {
@@ -69,7 +77,7 @@ h1 {
 }
 .drink-image {
   max-width: 200px;
-  background-color: #268d49a8;
+  background-color: var(--green);
   transform: rotate(0deg);
   border-radius: 5px;
 }
@@ -103,7 +111,7 @@ a:link {
   text-decoration: none;
 }
 .error {
-  color: red;
+  color: var(--red);
   text-align: center;
 }
 /*** detailspage ***/
@@ -133,17 +141,6 @@ a:link {
   font-weight: bold;
   font-style: italic;
 }
-/* .drink-info {
-  text-align: center;
-} */
-/* .list {
-  text-align: center;
-  margin: 50px;
-} */
-
-/* .instructions {
-  text-align: center;
-} */
 
 @media screen and (min-width: 768px) {
   .img-ingredient {
@@ -190,16 +187,15 @@ form textarea {
   gap: 50px;
 }
 .error-messages {
-  color: red;
+  color: var(--red);
   margin-top: 40px;
 }
-
 .input-success {
   border: solid 1px green;
 }
 
 .input-error {
-  border: solid 1px red;
+  border: solid 1px var(--red);
 }
 
 .modal {
