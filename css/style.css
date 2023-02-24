@@ -12,6 +12,7 @@ body {
   position: relative;
   font-family: roboto;
 }
+
 nav {
   position: fixed;
   top: 75px;
@@ -155,7 +156,7 @@ a:link {
   .list {
     margin: 0;
     display: inline;
-    width: auto;
+    width: 300;
   }
 }
 /*contact*/
