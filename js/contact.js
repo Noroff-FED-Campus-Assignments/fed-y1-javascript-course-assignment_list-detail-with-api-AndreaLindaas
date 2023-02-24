@@ -56,12 +56,12 @@ function validateAddress(address) {
     let errorMessage = "<li>Address is required</li>";
     errorMessages.innerHTML += errorMessage;
     addressHtml.classList.add("input-error");
-    ddressHtml.classList.remove("input-success");
+    addressHtml.classList.remove("input-success");
   } else if (address.trim().length < 25) {
     let errorMessage = "<li>Address is too short (min 25)</li>";
     errorMessages.innerHTML += errorMessage;
     addressHtml.classList.add("input-error");
-    ddressHtml.classList.remove("input-success");
+    addressHtml.classList.remove("input-success");
   } else {
     addressHtml.classList.remove("input-error");
     addressHtml.classList.add("input-success");
