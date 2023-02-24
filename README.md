@@ -7,18 +7,18 @@ API: https://www.thecocktaildb.com/api.php
 
 ## Report
 
-For this assignment, I have written a code that retrieves data from an API and showcases it on a webpage. The Api I have chosen contains the data on drinks and cocktails.
+For this assignment, I have written a code that retrieves data from an API and showcases it on a webpage. The API I have chosen contains the data on drinks and cocktails.
 I have created a index-page, detail-page, and contact-page.
 
-In the index-page, I have listed a image, name and if the drink is non-alcoholic. I have also created a search bar so that users can search for spesific ingredients or names, and created a checkbox if the user only wants non-alcoholic drinks. I also made a dropdown so its possible to sort the drinks. the page also showing how many results you get.
+I assume that the users of this cocktail site will be young people, and therefore I am trying to make a more vibrant design. For example the rotated navigation button on the left and using bright colors.
+
+In the index-page, I have listed an image, name and if the drink is non-alcoholic. I have also created a search bar so that users can search for specific ingredients or names, and created a checkbox if the user only wants non-alcoholic drinks. I also made a dropdown so its possible to sort the drinks. The page is also showing how many results you get.
 It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API. The same goes for sort function. I also had to find some code for sorting array from the internet because I could not get it to work with just .sort() from the earlier lessons.
 
-In the detail-page i have listed a image, name, ingredients and instructions.
+In the detail-page I have listed an image, name, ingredients and instructions.
 
 In the contact page I have a contact form.
 I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation. I could not make them both to work at the same time, so I only used my custom made validation in this assignment.
-
-I assume that the users of this cocktail site will be young people, and therefore I am trying to make a more vibrant design. For example the rotated navigation button on the left and using bright colors.
 
 Working with the API was OK, it had good enough documentation but I managed to understand what the endpoints contained by visiting them in the browser.
 
@@ -95,6 +95,6 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] There are no red underlines in VSCode.
 - [x] There are no error messages in the terminal when I run the project.
 - [x] My code is indented correctly.
-- [ ] I've checked my report for grammer & spelling using grammerly or chatGPT
+- [x] I've checked my report for grammer & spelling using grammerly or chatGPT
 - [ ] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [ ] I've checked off every todo in this README.
