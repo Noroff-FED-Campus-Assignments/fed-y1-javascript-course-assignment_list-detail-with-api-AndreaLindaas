@@ -46,6 +46,10 @@ h1 {
   font-size: 80px;
 }
 
+h1 a {
+  color: #000;
+}
+
 .alphabet {
   text-align: center;
   margin-bottom: 30px;
