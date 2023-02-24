@@ -159,8 +159,17 @@ a:link {
     display: inline;
     width: 300;
   }
+  .contact-page {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .error-messages {
+    margin-top: 40px;
+  }
 }
 /*contact*/
+
 form div {
   margin: 20px auto;
   width: 270px;
@@ -184,15 +193,21 @@ form textarea {
 
   padding: 10px;
 }
-.contact-page {
+/* .contact-page {
   display: flex;
   justify-content: center;
   gap: 50px;
-}
+} */
 .error-messages {
   color: var(--red);
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  display: inline-block;
+  text-align: left;
 }
+.error-center {
+  text-align: center;
+}
+
 .input-success {
   border: solid 1px green;
 }

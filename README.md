@@ -2,15 +2,26 @@
 
 # FED Javascript 1 - Course Assignment
 
+Netlify: https://cocktails-andrea.netlify.app
+
 ## Report
+
+For this assignment I have written a code that retrieves data from an API and showcases it on a webpage. The Api I have chosen contains the data of drinks and cocktails.
+I have created a index-page, detail-page and contact-page.
+
+In the index-page i have listed a image, name and if the drink is non alcoholic. I also made a search bar so the user can search for spesific ingredients or name, and a checkbox if the user only wants non alcoholic drinks. I also made a dropdown so its possible to sort the drinks. the page also showing how many results you get.
+It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API. The same goes for sort function. I also had to find some code for sorting array from the internet because I could not get it to work with just .sort() from the earlier lessons.
+
+In the detail-page i have listed a image, name, ingredients and instructions.
+
+In the contact page I have a contact form.
+I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation.
 
 I assume that the users of this cocktail site will be young people, and therefore I am trying to make a more vibrant design. For example the rotated navigation button on the left and using bright colors.
 
-I have not added subject to my form, but added Message instead. It felt wrong having a contact form with no way to add the message to the receiver. Validation rules are the same as subject would have. It is not clear for me when to write my own validation rules for form and when to use built-in validation.
-
-It was a bit hard to find the right way to display correct results when filtering checkbox (Show non alcoholic) was clicked. I think I managed to do it in a good way, even though it makes a new request to the API. The same goes for sort function. I also had to find some code for sorting array from the internet because I could not get it to work with just .sort() from the earlier lessons.
-
 Working with the API was OK, it had good enough documentation but I managed to understand what the endpoints contained by visiting them in the browser.
+
+This assignment was very challenging, but I have learned a lot from it.
 
 I also had started on my own before this repo was ready. I did not want to copy paste my code into this repos premade html, css and js files, so I just moved my main branch over from private github. I had help doing this.
 
@@ -64,7 +75,7 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] Details page URL includes a query param.
 - [x] My website makes a GET request to an API to get a list of results.
 - [x] My website makes a GET request to an API to get details of one result.
-- [ ] Input fields have the following attributes;
+- [x] Input fields have the following attributes;
   - [x] A name,
   - [x] A placeholder,
   - [ ] A aria-describedby,
