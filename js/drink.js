@@ -29,8 +29,10 @@ function showCocktail(cocktail) {
     let measure = cocktail[`strMeasure${i}`];
     let ingredient = cocktail[`strIngredient${i}`];
 
-    if (measure) {
-      let ingridientList = `<li><span class="measure">${measure}</span><span>${ingredient}</span></li>`;
+    if (measure || ingredient) {
+      let ingridientList = `<li><span class="measure">${
+        measure ? measure : ""
+      }</span><span>${ingredient ? ingredient : ""}</span></li>`;
 
       ingridientHtml.innerHTML += ingridientList;
     }

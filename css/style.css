@@ -124,6 +124,7 @@ a:link {
 
 .details-page img {
   width: 300px;
+  height: 100%;
   margin: 0 auto;
   display: block;
   border-top-left-radius: 5px;
@@ -133,8 +134,9 @@ a:link {
   list-style-type: none;
 }
 .details-page .ingredients li {
-  display: flex;
+  display: grid;
   gap: 20px;
+  grid-template-columns: 90px auto;
 }
 .details-page .list {
   margin: 0 auto;
