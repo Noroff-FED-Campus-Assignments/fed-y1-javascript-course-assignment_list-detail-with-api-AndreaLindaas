@@ -50,7 +50,7 @@ All of these todo's must be done to pass the asssignment.
   - [x] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
-- [ ] CSS uses variables
+- [x] CSS uses variables
 - [x] Code is dry - There are no repeating functions, variables.
 
 ## Checklist

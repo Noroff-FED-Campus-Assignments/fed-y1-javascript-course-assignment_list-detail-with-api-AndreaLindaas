@@ -104,6 +104,12 @@ a:link {
   color: var(--red);
   text-align: center;
 }
+.non-alcoholic {
+  text-align: center;
+  background-color: #0b2f0b;
+  color: white;
+  margin-top: 5px;
+}
 /*** detailspage ***/
 
 /* .details-page h1 {

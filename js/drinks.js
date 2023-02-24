@@ -118,6 +118,9 @@ function createAndAddDrinkCard(drinks) {
   <div class="drink-image">
       <a href="details.html?id=${drinks.idDrink}">
       <img alt="Picture of ${drinks.strDrink}" src="${drinks.strDrinkThumb}" />
+      <div class="non-alcoholic">${
+        drinks.strAlcoholic != "Alcoholic" ? drinks.strAlcoholic : ""
+      }</div>
       <div class="drink-name">${drinks.strDrink}</div>
       </a>
   </div>`;
